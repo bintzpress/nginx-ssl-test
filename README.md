@@ -4,4 +4,6 @@ This is a simple Docker Compose project to test a certificate and key using a NG
 
 After this you can run the project by doing:
 
-"docker-compose up -d"
+docker-compose up -d
+
+You can then connect up to see if your certificate worked.
