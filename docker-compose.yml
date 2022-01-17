@@ -1,0 +1,19 @@
+#
+# Docker Compose for NGINX server running SSL
+#
+version: "3.9"
+services:
+  ssl-tester:
+    build:
+      context: ./context
+      args:
+        NGINX_TAG: ${NGINX_TAG}
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      SSL_CERT_FILENAME: ${SSL_CERT_FILENAME}
+      SSL_KEY_FILENAME: ${SSL_KEY_FILENAME}
+    volumes:
+      - ${SSL_HOST_DIR}/${SSL_CERT_FILENAME}:/etc/nginx/ssl/${SSL_CERT_FILENAME}
+      - ${SSL_HOST_DIR}/${SSL_KEY_FILENAME}:/etc/nginx/ssl/${SSL_KEY_FILENAME}
