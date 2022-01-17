@@ -6,4 +6,4 @@ After this you can run the project by doing:
 
 docker-compose up -d
 
-You can then connect up to see if your certificate worked.
+You can then go to your address in a web browser and see if your certificate gives SSL errors.
